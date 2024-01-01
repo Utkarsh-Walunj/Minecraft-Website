@@ -1,0 +1,625 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800&display=swap');
+
+*{
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 1s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: #FFFFFF;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #FF7D1C;
+}
+
+section{
+    padding: 5rem 9%;
+}
+
+
+.header{
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   padding: 2rem 9%;
+   z-index: 1000;
+   display: flex;
+   align-items: center;
+}
+
+.header.active {
+    background: #171615;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.header .logo{
+    margin-right: auto;
+    font-size: 2.5rem;
+}
+
+.header .logo i{
+    color: #FFA520;
+}
+
+.header .navbar a{
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FFA520;
+}
+
+.header .navbar a:hover{
+    color: #219150;
+}
+
+.header .navbar #nav-close{
+    font-size: 5rem;
+    cursor: pointer;
+    color: #10221b;
+    display: none;
+}
+
+.header .icons a,
+.header .icons div{
+    font-size: 3.5rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    color: #FFA520;
+}
+
+.header .icons a:hover,
+.header .icons div:hover{
+    color: #337121;
+}
+
+.header #menu-btn{
+    display: none;
+}
+
+.heading{
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2.5rem;
+    color: #3C8527;
+}
+
+.heading span{
+    color: #FFA520;
+}
+
+.btn{
+    margin: auto;
+    padding: 10px 20px;
+    border: none;
+    background: #FFB054;
+    color: #6F2900;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-shadow: 0 2px 0 #FFCC6A;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: inset 0 4px #fce07e, inset 0 -4px #d0750a, inset 4px 0 #df8318, inset -4px 0 #ffbb54;
+    transition: all .25s,opacity .75s .5s;
+    user-select: none;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.btn:hover{
+    background: #313131;
+    box-shadow: inset 0 4px #808080, inset 0 -4px #000000, inset 4px 0 #000000, inset -4px 0 #313131;
+    color: #FFFFFF;
+}
+
+.home{
+    padding: 0;
+}
+
+.home .box{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-size: cover !important;
+    background-position: center !important;
+    justify-content: center;
+    padding: 2rem 9%;
+    position: relative;
+}
+
+.home .box .content{
+    width: 45rem;
+    height: 45rem;
+    justify-content: center;
+    position: absolute;
+}
+
+.home .box .content img{
+    width: 400px;
+}
+
+.home .box .content .btn{
+    margin: 15rem;
+    position: relative;
+    top: 35rem;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+    font-size: 3rem;
+    color: #FFB054;
+}
+
+
+.category{
+    background-image: url(https://www.minecraft.net/content/dam/minecraft/backgrounds/bg-wool-dark.png);
+}
+
+.category .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,2fr));
+    gap: 1.5rem;
+}
+
+.category .box-container .box{
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+    border: 0.2rem solid #FFA520;
+    overflow: hidden;
+    background-color: #181818;
+}
+
+.category .box-container .box img{
+    height: 358px;
+    width: 100%;
+    border-radius: 50;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.category .box-container .box:hover{
+    transform: scale(0.9);
+}
+
+.category .box-container .box h3{
+    font-size: 2rem;
+    color: #FFA520;
+}
+
+.category .box-container .box p{
+    font-size: 1.5rem;
+    color: #3C8527;
+    padding: 1rem 0;
+}
+
+.about{
+    background-image: url(https://www.minecraft.net/content/dam/minecraft/backgrounds/bg-wool-dark.png);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+}
+
+.about .img{
+    position: relative;
+}
+
+.about .img:hover img{
+    transform:scale(1.2) rotate(5deg);
+}
+
+.about .img img{
+    box-shadow: 0 0 2rem 2rem rgba(184, 93, 8, 0.664);
+    border: 0.2rem solid #FFA520;
+}
+
+.about .content{
+    position: absolute;
+    top: 5;
+    left: 5;
+    width: 750px;
+}
+
+.about .content h3{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+}
+
+.about .content p{
+    font-size: 17px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+    padding: 0;
+    line-height: 26px;
+}
+
+.shop{
+    background-image: url(https://www.minecraft.net/content/dam/minecraft/backgrounds/bg-wool-dark.png);
+}
+
+.shop .slide{
+    border: 0.2rem solid #FFA520;
+    background-color: #181818;
+}
+
+.shop .slide:hover .img .icons{
+    transform: translateY(0);
+}
+
+.shop .slide .img{
+    position: relative;
+    overflow: hidden;
+    height: 30rem;
+    width: 100%;
+}
+
+.shop .slide .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.shop .slide .img .icons{
+    width: 100%;
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    text-align: center;
+    z-index: 10;
+    transform: translateY(7rem);
+}
+
+.shop .slide .img .icons a{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 1.7rem;
+    background: #FFA520;
+    color: #FFFFFF;
+    margin: 0.2rem;
+}
+
+.shop .slide .img .icons a:hover{
+    background: #3C8527;
+}
+
+.shop .slide .content{
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.shop .slide .content h3{
+    font-size: 2rem;
+    color: #FFA520;
+}
+
+.shop .slide .content .price{
+    padding: 1rem 0;
+    padding-top: .5rem;
+    font-size: 2rem;
+    color: #3C8527;
+}
+
+.shop .slide .content .starts i{
+    font-size: 1.7rem;
+    color: #FFA520;
+}
+
+.reviews{
+    background-image: url(https://www.minecraft.net/content/dam/minecraft/backgrounds/bg-wool-dark.png);
+}
+
+.reviews .slide .text{
+    padding: 2rem;
+    font-size: 1.5rem;
+    font-style: italic;
+    background: #181818;
+    border-radius: .5rem;
+    color: #FFA520;
+    border: 0.2rem solid #FFA520;
+    line-height:2;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 3rem;
+}
+.reviews .slide .text::before{
+    content: "";
+    position: absolute;
+    bottom:-1.5rem;
+    left: .7rem;
+    height:3rem;
+    width: 3rem;
+    background: #3C8527;
+    transform: rotate(45deg);
+
+}
+.reviews .slide .user{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+}
+.reviews .slide .user img{
+    height:7rem;
+    width:7rem;
+    border-radius: 50%;
+}
+.reviews .slide .user h3{
+    font-size: 2rem;
+    color: #FFA520;
+}
+.reviews .slide .user span{
+    color: #3C8527;
+    font-size: 1.5rem;
+}
+
+.blogs{
+    background-image: url(https://www.minecraft.net/content/dam/minecraft/backgrounds/bg-wool-dark.png);
+}
+
+.blogs .slide{
+   text-align: center;
+   padding: 2rem;
+}
+
+.blogs .slide img{
+    height: 40rem;
+    width: 100%;
+    border: 0.2rem solid #FFA520;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.blogs .slide .icons{
+    background: #3C8527;
+    border-radius: .5rem;
+    padding: 1rem;
+    position: relative;
+    top: -2rem;
+    display: inline-block;
+}
+
+.blogs .slide .icons a{
+    font-size: 1.4rem;
+    color: #FFA520;
+    margin: 0 1rem;
+}
+
+.blogs .slide .icons a:hover{
+    color: #219150;
+}
+
+.blogs .slide .icons a i{
+    padding-right: .5rem;
+    color: #FFA520;
+}
+
+.blogs .slide h3{
+    font-size: 2rem;
+    color: #FFA520;
+}
+
+.blogs .slide p{
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    line-height: 2;
+    color: #219150;
+}
+
+.newsletter{
+    background-color: #FFFFFF;
+}
+
+.newsletter .content {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.newsletter .content p{
+    font-size: 1.5rem;
+    line-height: 2;
+    color: #219150;
+}
+
+.newsletter .content form{
+    margin-top: 2rem;
+    background: #FFFFFF;
+    border-radius: 5rem;
+    border: 0.2rem solid #219150;
+    padding: .7rem;
+    display: flex;
+}
+
+.newsletter .content form .email{
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: #FFA520;
+    padding: 0 1.3rem;
+}
+
+.newsletter .content form .btn{
+    margin: 0;
+    border-radius: 5rem;
+    background: #FFA520;
+    color: #6F2900;
+    text-shadow: 0 2px 0 #FFCC6A;
+}
+
+.newsletter .content form .btn:hover{
+    background: #313131;
+    color: #FFFFFF;
+}
+
+.clients{
+    background-image: url(https://www.minecraft.net/content/dam/minecraft/backgrounds/bg-wool-dark.png);
+}
+
+.clients .slide{
+    text-align: center;
+}
+
+.clients .slide img{
+    height: 12rem;
+}
+
+.clients .slide img:hover{
+    transform: scale(1.1);
+}
+
+.footer{
+    background-image: url(https://www.minecraft.net/content/dam/minecraft/backgrounds/bg-wool-dark.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.footer .box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1rem;
+
+}
+.footer .box-container .box h3{
+    font-size: 2rem;
+    padding:1.5rem 0;
+    color:#fff;
+}
+.footer .box-container .box a{
+    display:block;
+    font-size: 1.4rem;
+    color: #fff;
+    padding:1rem 0;
+}
+.footer .box-container .box a i{
+    color: #219150;
+    padding-right: .5rem;
+}
+.footer .box-container .box a:hover{
+    color: #219150;
+}
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+.footer .credit{
+    text-align: center;
+    margin-top:2.5rem;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: #fff;
+}
+.footer .credit span{
+    color: #FFA520;
+}
+
+
+
+
+
+/* media queries */
+@media(max-width:1200px){
+    .header{
+        padding: 2rem;
+    }
+    section{
+        padding: 3rem 2rem;
+    }
+}
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+        scroll-padding-top: 7rem;
+    }
+    .home .box{
+        padding: 2rem;
+        justify-content: center;
+    }
+    .home .box .content {
+        text-align: center;
+    }
+    .home .box .content span{
+        font-size: 3rem;
+    }
+    .home .box .content h3{
+        font-size: 4rem;
+    }
+    .btn{
+        font-size: 10px;
+    }
+}
+
+@media(max-width:768px){
+    .header #menu-btn{
+        display: inline-block;
+    }
+    .header .navbar{
+        position: fixed;
+        top: 0;
+        left: -110%;
+        background: #FFFFFF;
+        z-index: 1000;
+        width: 35rem;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .header .navbar a{
+        margin: 1rem 0;
+        font-size: 3rem;
+    }
+    .header .navbar #nav-close{
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+    }
+    .header .navbar.active{
+        left: 0;
+        box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+    }
+    .swiper-button-next::after
+    .swiper-button-prev::after{
+        display: none;
+    }
+    .btn{
+        font-size: 5px;
+    }
+}
+
+@media(max-width:450){
+    html{
+        font-size: 50%;
+    }
+    .heading{
+        font-size: 3rem;
+    }
+}
